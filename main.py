@@ -1,39 +1,42 @@
 from login import login
 from terminal import spo_terminal
-from rps import menu
+import rps
 
-game_list = []
+if __name__ == "__main__":
+    game_list = []
 
-while True:
-    print("\n\n\n\n\n")
-    print("-" * 25)
-    print(f"| {' ' * 5}1. Terminal      |")
-    print(f"| {' ' * 5}2. Programs      |")
-    print(f"| {' ' * 5}3. Settings      |")
-    print("-" * 25)
+    while True:
+        print("\n\n\n\n\n")
+        print("-" * 25)
+        print(f"| {' ' * 5}1. Terminal      |")
+        print(f"| {' ' * 5}2. Programs      |")
+        print(f"| {' ' * 5}3. Settings      |")
+        print("-" * 25)
 
-    choice = int(input("> "))
+        choice = int(input("> "))
 
-    if choice == 1:
-        term = spo_terminal()
+        if choice == 1:
+            term = spo_terminal()
 
-        if term == "add rps":
-            game_list.append("Rock Paper Scissors")
+            if term == "add rps":
+                game_list.append("Rock Paper Scissors")
 
 
 
-    elif choice == 2:
+        elif choice == 2:
 
-        if len(game_list) == 0:
-            print("No games installed")
+            if len(game_list) == 0:
+                print("No games installed")
     
-        else:
-            for el in game_list:
-                oc = 1
-                print(f"{oc}: {el}")
-                oc += 1
+            else:
+                for el in game_list:
+                    oc = 1
+                    print(f"{oc}: {el}")
+                    oc += 1
 
-            game_choice = int(input("> "))
+                game_choice = int(input("> "))
 
-            if game_choice == 1:
-                menu()
+                if game_choice == 1:
+                    import rps
+                    a = rps.menu()
+
