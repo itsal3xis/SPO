@@ -4,11 +4,11 @@ def spo_terminal():
     print("-" * 14)
 
     while True:
-        command = input(">")
+        command = input("> ")
 
         command = command.lower()
 
-        if command == "?" or command == "help" or command == "?help":
+        if command == "?" or command == "help" or command == "?help" or command == "/?":
             print("Here is the help terminal ... If you have any questions about a command just put (?) before a command, for example ?help")
             #print("")
 
@@ -25,6 +25,6 @@ def spo_terminal():
         
         
         else:
-            print("Command unknown... try again or help / ?")
+            print("Command unknown... try again or help /?")
 
         print("\n")
